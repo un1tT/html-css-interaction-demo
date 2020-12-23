@@ -1,0 +1,91 @@
+.Modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: show .5s ease;
+}
+
+.Modal-content {
+    padding: 35px 12px 12px 12px;
+    border: 1px solid white;
+    width: 72rem;
+    height: 42rem;
+    background-color: #484e57;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Submit-button {
+    height: 70px;
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
+    font-size: calc(5px + 2vmin);
+    cursor: pointer;
+}
+
+.Submit-button:hover {
+    background-color: #717a88;
+}
+
+.Submit-button:disabled,
+.Submit-button[disabled]:hover {
+    background-color: inherit;
+    cursor: not-allowed;
+}
+
+.Modal-inputs {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+select {
+    height: 36px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.Close-icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.Close-icon:hover {
+    opacity: 1;
+}
+
+.Close-icon:before, .Close-icon:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+}
+.Close-icon:before {
+    transform: rotate(45deg);
+}
+.Close-icon:after {
+    transform: rotate(-45deg);
+}
+
